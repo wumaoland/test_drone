@@ -3,11 +3,10 @@ type: docker
 name: test
 
 steps:
-  - name: greeting
-    image: alpine
+  - name: run_rust
+    image: rust
     commands:
-      - echo hello
-      - echo world
+      - cargo run
 #kind: pipeline
 #name: pipeline-example-maven
 #
