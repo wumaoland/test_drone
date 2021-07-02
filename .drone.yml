@@ -3,10 +3,10 @@ type: docker
 name: test
 
 steps:
-  - name: run_rust
+  - name: build
     image: rust
     commands:
-      - cargo run
+      - cargo build
 #kind: pipeline
 #name: pipeline-example-maven
 #
