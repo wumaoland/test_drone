@@ -2,5 +2,7 @@ use std::io::{stdin, Read};
 
 fn main() {
     println!("Hello, world!");
-    let str = stdin().read().unwrap();
+    let arr = &mut [0;20];
+    stdin().read(arr).unwrap();
+    println!("{:?}",arr);
 }
