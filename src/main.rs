@@ -1,8 +1,15 @@
 use std::io::{stdin, Read};
 
-fn main() {
-    println!("Hello, world!");
-    let arr = &mut [0;20];
-    stdin().read(arr).unwrap();
-    println!("{:?}",arr);
+#[macro_use] extern crate rocket;
+
+#[get("/")]
+fn index() -> &'static str {
+    "Hello, world!"
 }
+
+#[launch]
+fn rocket() -> _ {
+    rocket::build().mount("/", routes![index])
+}
+
+// fn main() {}
