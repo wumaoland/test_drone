@@ -13,7 +13,6 @@ steps:
     commands:
       - cargo build
 
-
 volumes:
   - name: rust_source
     host:
