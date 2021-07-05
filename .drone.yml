@@ -9,7 +9,7 @@ steps:
     image: rust
     volumes:
       - name: rust_source
-        path: /home/root/.cargo/config
+        path: /usr/local/cargo/config
     commands:
       - cargo build
 
