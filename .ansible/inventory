@@ -1,0 +1,2 @@
+[hwcloud]
+139.9.143.195 ansible_user=root ansible_port=28312

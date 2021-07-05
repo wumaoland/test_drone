@@ -11,8 +11,12 @@ steps:
       - name: rust_source
         path: /usr/local/cargo/config
     commands:
-      - cargo build
-
+      - cargo build --release
+  - name: ansible playbook
+    image: plugins/ansible:1
+    settings:
+      playbook: .ansible/playbook.yml
+      inventory: .ansible/inventory
 
 volumes:
   - name: rust_source

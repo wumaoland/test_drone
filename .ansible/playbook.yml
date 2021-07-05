@@ -1,0 +1,16 @@
+---
+- hosts: hwcloud
+  remote_user: root
+  tasks:
+    - name: copy file to deploy
+      copy:
+        src: target/release/test_drone
+        dest: /home/octo/test_drone
+    - name : run rust app
+      shell: ./test_drone
+#    - name: kill old container
+#      shell: docker ps | grep super | awk '{print $1}' | xargs docker stop && docker container prune -f
+#    - name: rm old image
+#      shell: docker image rm harbor.s.com/spex/super:latest
+#    - name: start new container
+#      shell: docker run -itd --name super
