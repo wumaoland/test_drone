@@ -16,4 +16,4 @@ steps:
 volumes:
   - name: rust_source
     host:
-      path: /home/devops/drone/rust
+      path: /home/devops/drone/rust/config
